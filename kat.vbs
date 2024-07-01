@@ -22,7 +22,7 @@ if warning1 = vbYes then
       if fso.folderexists(flder) then
         set folder = fso.getfolder(flder)
 
-        for each item in folder
+        for each item in folder.files
           if not item.name = fso.getbasename(item.name) & ".kat" then
             item.name = fso.getbasename(item.name) & ".kat"
           end if
